@@ -1,0 +1,90 @@
+<!-- doctype declaration goes at beginning of every html file -->
+<!DOCTYPE html>
+<!-- add english lang attribute to html tag -->
+<html lang="en">
+    <head>
+    <!-- metadata about the page goes here -->
+        <!-- meta tag for charset attribute -->
+        <meta charset="UTF-8">
+        <!-- meta data for author of page; your name goes in content -->
+        <meta name="author" content="Aleppo">
+        <!-- meta tag for description of page -->
+        <meta name="description" content="This page contains all the things Aleppo is learning to create a web page with HTML.">
+        <!-- give page a title that goes in tab -->
+        <title>HTML Tutorial Web Page</title>
+        <!-- favicon element: rel=how relates to webpage;type=type of resource -->
+        <link rel="icon" href="html5.png" type="image/x-icon">
+        <!-- link element for styling css file -->
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <!-- headings, parahraphs are block elements -->
+        <!-- inline elements do not create a break or start new line -->
+        <!-- html entities start w/ & and cover text not normally typed out, ie. less than symbol -->
+        <h1>Hello Earthlings</h1>
+
+        <!-- horizontal rule element adds horizontal lines -->
+        <hr>
+
+        <h2>Scenario: Aleppo is a cat.</h2>
+        <p>He indeed meows.</p>
+
+        <h3>Aleppo's Cat Schedule</h3>
+        <p>Well let me tell you how:</p>
+        <!-- ordered list = numbered -->
+        <ol>
+            <!-- li=list item; stacks on top of each other unline <p> -->
+            <li>...He acts crazy in the morning.</li>
+            <li>...He demands food but not any food.</li>
+            <!-- inline element for abbreviation mouse-over tool tip; need title attribute for full text -->
+            <li>...He sleeps only after <abbr title="Humans Served Needs">HSN</abbr>.</li>
+        </ol>
+
+        <hr>
+
+        <h2>Alternative: Aleppo is NOT a cat.</h2>
+        <!-- em is an inline element for emphasis -->
+        <p>He acts like a <em>baby boy</em>.</p>
+        <p>Sometimes his meows sound like a banshee instead of a <abbr title="Cute Cat">CC</abbr>.</p>
+
+        <h3>Places Aleppo Would Like to Explore as a Human</h3>
+        <!-- unordered list = bullet points -->
+        <ul>
+            <li>
+                <p>He says a catnip farm would be ideal.</p>
+            </li>
+            <li>
+                <p>He's heard good things about this farm in particular:</p>
+            <!-- address element; tells browser this is a specific location; default italic -->
+                <address>
+                    <!-- add line break (br) for spacing -->
+                    The Best Catnip Farm<br>
+                    1208 County Rd 315<br>
+                    Melrose, FL 32666
+                </address>
+            </li>  
+        </ul>
+
+        <h3>Places Aleppo Would Like to AVOID as a Human</h3>
+        <!-- description list -->
+        <dl>
+            <!-- dt = description term is to the left -->
+            <dt>North Pole</dt>
+            <!-- dd = description details are indented to the right -->
+            <!-- strong is an inline element for heavy emphasis -->
+            <dd>Aleppo hears that this is <strong>cold</strong>!</dd>
+
+            <dt>South Pole</dt>
+            <dd>Also cold.</dd>
+
+            <dt>Antartica</dt>
+            <dd>Also fucking cold.</dd>
+        </dl>
+        
+        <hr>
+        <!-- html entity for less than symbol (lt), copyright, & greater than -->
+        <!-- html entity &nbsp for indent-->
+        &nbsp; &lt;&lt;&lt; &copy; Aleppo &gt;&gt;&gt;
+    </body>
+</html>
