@@ -20,122 +20,320 @@
     </head>
 
     <body>
-        <!-- headings, parahraphs are block elements -->
-        <!-- inline elements do not create a break or start new line -->
-        <!-- html entities start w/ & and cover text not normally typed out, ie. less than symbol -->
-        <h1>Aleppo's Goals for the Year</h1>
+        <!-- headers are top level for topic and tell us the heading -->
+        <header>
+            <h1>Aleppo's Goals for the Year</h1>
+            <!-- labels in case more than 1 nav on page -->
+            <nav aria-label="primary-navigation">
+                <ul>
+                    <li>
+                        <!-- link to named sections using # for id value -->
+                        <a href="#cat">Is Aleppo a Cat?</a>
+                    </li>
+                    <li>
+                        <a href="#vacation">Planning Aleppo's Vacation</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Aleppo</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Aleppo</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
         <!-- horizontal rule element adds horizontal lines -->
         <hr>
 
-        <!-- link to named sections using # for id value -->
-        <nav>
-            <ul>
-                <li>
-                    <a href="#cat">Is Aleppo a Cat?</a>
-                </li>
-                <li>
-                    <a href="#vacation">Planning his Vacation</a>
-                </li>
-            </ul>
-        </nav>
-
-        <hr>
-
-        <!-- section id attribute for nav -->
-        <section id="cat">
-            <h2>Scenario: Aleppo is a cat.</h2>
-            <p>He indeed meows.</p>
-            <!-- width & height gives browser idea of space & aspect ratio -->
-            <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="Learning HTML5" width="300" height="300">
-            <!-- figure element not only for images; this is a code example -->
-            <figure>
-                <figcaption>An example of html5 code</figcaption>
-                <p>
-                    <!-- inline tag that helps display code -->
-                    <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
-                </p>
-            </figure>
-            <h3>Aleppo's Cat Schedule</h3>
-            <p>Well let me tell you how:</p>
-            <!-- ordered list = numbered -->
-            <ol>
-                <!-- li=list item; stacks on top of each other unline <p> -->
-                <li>...He acts crazy in the morning.</li>
-                <li>...He demands food but not any food.</li>
-                <!-- inline element for abbreviation mouse-over tool tip; need title attribute for full text -->
-                
-                <li>...He sleeps only after <abbr title="Humans Served Needs">
-                    <!-- a=anchor tag for linking pages; full address=absolute ref -->
-                    <a href="https://developer.mozilla.org/">HSN</a>
-                </abbr>.</li>
-            </ol>
-        </section>
-
-        <hr>
-
-        <section id="vacation">
-            <h2>Alternative: Aleppo is NOT a cat.</h2>
-            <!-- em is an inline element for emphasis -->
-            <p>He acts like a <em>baby boy</em>.</p>
-            <p>Sometimes his meows sound like a banshee instead of a <abbr title="Cute Cat">CC</abbr>.</p>
-
-            <h3>Places Aleppo Would Like to Explore as a Human</h3>
-            <!-- unordered list = bullet points -->
-            <ul>
-                <li>
-                    <p>He says a catnip farm would be ideal.</p>
-                    <!-- figure tag signal figure w/ image & caption; this way the caption is related with the image by the browser (rather than using <p> tag) -->
+        <!-- only 1 <main> element per page -->
+        <main>
+            <!-- article element b/c has a clear topic, can stand on own -->
+            <article id="cat">
+                <h2>Scenario: Aleppo is a cat.</h2>
+                <p>He indeed meows.</p>
+                <section>
+                    <h3>HTML5</h3>
+                    <!-- width & height gives browser idea of space & aspect ratio -->
+                    <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="Learning HTML5" width="300" height="300">
+                    <!-- figure element not only for images; this is a code example -->
                     <figure>
-                        <!-- loading attribute is eager by default; lazy=any img below fold (do not currently see) will load when browser is about to show; helps pages load faster -->
-                        <img src="img/boy.jpg" alt="Boy" title="He's sleeping?" width="400" height="225" loading="lazy">
-                        <figcaption>
-                            Aleppo dreaming of catnip farms.
-                        </figcaption>
+                        <figcaption>An example of html5 code</figcaption>
+                        <p>
+                            <!-- inline tag that helps display code -->
+                            <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+                        </p>
                     </figure>
-                </li>
-                <li>
-                    <p>He's heard good things about this farm in particular:</p>
-                    <!-- address element; tells browser this is a specific location; default italic -->
-                    <address>
-                        <!-- add line break (br) for spacing -->
-                        The Best Catnip Farm<br>
-                        1208 County Rd 315<br>
-                        Melrose, FL 32666
-                    </address>
-                    <figure>
-                        <img src="img/aleppo.jpg" alt="Aleppo kitten pic" title="Aleppo as a kitten." width="400" height="267" loading="lazy">
-                        <figcaption>
-                            Aleppo when he first learned about The Best Catnip Farm.
-                        </figcaption>
-                    </figure>
-                </li>  
-            </ul>
+                </section>
+                <section>
+                    <h3>Aleppo's Cat Schedule</h3>
+                    <p>Well let me tell you how:</p>
+                    <!-- ordered list = numbered -->
+                    <ol>
+                        <!-- li=list item; stacks on top of each other unline <p> -->
+                        <li>...He acts crazy in the morning.</li>
+                        <li>...He demands food but not any food.</li>
+                        <!-- inline element for abbreviation mouse-over tool tip; need title attribute for full text -->
+                        
+                        <li>...He sleeps only after <abbr title="Humans Served Needs">
+                            <!-- a=anchor tag for linking pages; full address=absolute ref -->
+                            <a href="https://developer.mozilla.org/">HSN</a>
+                        </abbr>.</li>
+                    </ol>
+                    <!-- aside is a semantic element for another section of complimentary text not as important as what's in the main section or article it's inside of -->
+                    <aside>
+                        <details>
+                            <!-- mark applies highlighter to text -->
+                            <summary>Guess the <mark>number of hours</mark> Aleppo sleeps per day</summary>
+                            <!-- time can provide meaning in html for browser -->
+                            <p>He starts at <time datetime="08:00">8 am</time> and sleeps for <time datetime="PT3H">3 hours</time> every morning.</p>
+                        </details>
+                    </aside>
+                    <br>
+                    <!-- table element only expands to fit content that is within -->
+                    <table>
+                        <!-- title of table -->
+                        <caption>Aleppo's Schedule</caption>
+                        <thead>
+                            <!-- table row element -->
+                            <tr>
+                                <!-- table heading bold by default -->
+                                <!-- indent for empty cell -->
+                                <!-- scope is how the heading relates to the table -->
+                                <th>&nbsp;</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Activity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Morning</th>
+                                <!-- table data element-->
+                                <td>
+                                    <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
+                                </td>
+                                <td>Sleep</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Break</th>
+                                <td>
+                                    <time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time>
+                                </td>
+                                <td>Eat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Afternoon</th>
+                                <td>
+                                    <time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time>
+                                </td>
+                                <td>Play</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Evening</th>
+                                <td rowspan="2">All Other Times</td>
+                                <td>Free Time</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Night</th>
+                                <td>Sleep</td>
+                            </tr>
+                        </tbody>
+                        <!-- footers are good for things to be totalled up -->
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">And that's what Aleppo does every day, 5 days a week. Just eat, sleep, play, and reignite!</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+            </article>
 
-            <h3>Places Aleppo Would Like to AVOID as a Human</h3>
-            <!-- description list -->
-            <dl>
-                <!-- dt = description term is to the left -->
-                <dt>North Pole</dt>
-                <!-- dd = description details are indented to the right -->
-                <!-- strong is an inline element for heavy emphasis -->
-                <dd>Aleppo hears that this is <strong>cold</strong>!</dd>
+            <hr>
 
-                <dt>South Pole</dt>
-                <dd>Also cold.</dd>
+            <article id="vacation">
+                <h2>Alternative: Aleppo is NOT a cat.</h2>
+                <!-- em is an inline element for emphasis -->
+                <p>He acts like a <em>baby boy</em>.</p>
+                <p>Sometimes his meows sound like a banshee instead of a <abbr title="Cute Cat">CC</abbr>.</p>
+                <section>
+                    <h3>Places Aleppo Would Like to Explore as a Human</h3>
+                    <!-- unordered list = bullet points -->
+                    <ul>
+                        <li>
+                            <p>He says a catnip farm would be ideal.</p>
+                            <!-- figure tag signal figure w/ image & caption; this way the caption is related with the image by the browser (rather than using <p> tag) -->
+                            <figure>
+                                <!-- loading attribute is eager by default; lazy=any img below fold (do not currently see) will load when browser is about to show; helps pages load faster -->
+                                <img src="img/boy.jpg" alt="Boy" title="He's sleeping?" width="400" height="225" loading="lazy">
+                                <figcaption>
+                                    Aleppo dreaming of catnip farms.
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <p>He's heard good things about this farm in particular:</p>
+                            <!-- address element; tells browser this is a specific location; default italic -->
+                            <address>
+                                <!-- add line break (br) for spacing -->
+                                The Best Catnip Farm<br>
+                                1208 County Rd 315<br>
+                                Melrose, FL 32666
+                            </address>
+                            <figure>
+                                <img src="img/aleppo.jpg" alt="Aleppo kitten pic" title="Aleppo as a kitten." width="400" height="267" loading="lazy">
+                                <figcaption>
+                                    Aleppo when he first learned about The Best Catnip Farm.
+                                </figcaption>
+                            </figure>
+                        </li>  
+                    </ul>
+                </section>
 
-                <dt>Antartica</dt>
-                <dd>Also fucking cold.</dd>
-            </dl>
-        </section>
+                <section>
+                    <h3>Places Aleppo Would Like to AVOID as a Human</h3>
+                    <!-- description list -->
+                    <dl>
+                        <!-- dt = description term is to the left -->
+                        <dt>North Pole</dt>
+                        <!-- dd = description details are indented to the right -->
+                        <!-- strong is an inline element for heavy emphasis -->
+                        <dd>Aleppo hears that this is <strong>cold</strong>!</dd>
+
+                        <dt>South Pole</dt>
+                        <dd>Also cold.</dd>
+
+                        <dt>Antartica</dt>
+                        <dd>Also fucking cold.</dd>
+                    </dl>
+                </section>
+            </article>
+
+            <hr>
+
+            <article id="contact">
+                <h2>Contact Aleppo</h2>
+                <p>He'd really like to hear from you (shaking the treat bag)!</p>
+
+                <form action="https://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>Personal Info</legend>
+                        <p>
+                            <label for="firstName">First Name:</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required>
+                        </p>
+                        <p>
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="Doofus" autocomplete="on" required>
+                        </p>
+                        <p>
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="passworder" placeholder="Your Secret" required>
+                        </p>
+                        <p>
+                            <label for="phone">Phone:</label>
+                            <input type="tel" name="phone" id="phone" placeholder="6666666666" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                        </p>
+                        <p>
+                            <label for="decade">Favorite Decade:</label>
+                            <input type="number" name="decade" id="decade" min="1600" max="2022" step="10" value="1970">
+                        </p>
+                        <p>
+                            <label for="coffee">Favorite Coffee:</label>
+                            <select name="coffee" id="coffee" multiple size="5">
+                                <optgroup label="Normal people">
+                                    <option value="black">Black</option>
+                                    <option value="oatly" selected>Oatly creamer</option>
+                                    <option value="flavor">Flavored creamer</option>
+                                </optgroup>
+                                <optgroup label="Wacky people">
+                                    <option value="mixed">Mixed with ice cream</option>
+                                    <option value="spicy">Spiced (tobasco not chai)</option>
+                                    <option value="chocolate">Mixed with fudge</option>
+                                </optgroup>
+                                <option value="othe">Other</option> 
+                            </select>
+                        </p>
+                        <!-- <p>
+                            <label for="coffee">Favorite Coffee:</label>
+                            <input type="text" name="coffee" id="coffee" list="coffee-list">
+                            <datalist id="coffee-list">
+                                <option value="coffee, black or with creamer">
+                                <option value="mixed with ice cream">
+                                <option value="spiced (tobasco not chai)">
+                                <option value="mixed with fudge"> 
+                            </datalist>
+                        </p> -->
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>What is your favorite food?</legend>
+                        <p>
+                            <input type="radio" name="food" id="tofu" value="tofu">
+                            <label for="tofu">Tofu stuff</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="potato" value="potato">
+                            <label for="potato">Potato stuff</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="other" value="other">
+                            <label for="other">Other stuff</label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Do you have pets?</legend>
+                        <p>
+                            <input type="checkbox" name="pets" id="rock" value="rock">
+                            <label for="rock">Rock</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pets" id="tree" value="tree">
+                            <label for="tree">Tree</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pets" id="fire" value="fire">
+                            <label for="fire">Fire</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pets" id="otherPet" value="otherPet">
+                            <label for="otherPet">Other stuff</label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Send Aleppo a Note</legend>
+                        <label for="message">Your Message:</label>
+                        <br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here. Or slam your head on the keyboard."></textarea>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Submit</button>
+                    <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </article>
+        </main>
 
         <hr>
 
-        <!-- html entity for less than symbol (lt), copyright, & greater than -->
-        <!-- html entity &nbsp for indent-->
-        &lt;&lt;&lt; &copy; <a href="about.html">Aleppo</a> &gt;&gt;&gt;
-        <p>
-            <a href="#">Back to Top</a>
-        </p>
+        <footer>
+            <!-- wrap in p for better css formating -->
+            <p>
+                <!-- html entity for less than symbol (lt), copyright, & greater than -->
+                <!-- html entity &nbsp for indent-->
+                &lt;&lt;&lt; &copy; <a href="about.html">Aleppo</a> &gt;&gt;&gt;
+            </p>
+            <p>
+                <a href="#">Back to Top</a>
+            </p>
+        </footer>
     </body>
 </html>
+
+
+<!-- headings, parahraphs are block elements -->
+<!-- inline elements do not create a break or start new line -->
+<!-- html entities start w/ & and cover text not normally typed out, ie. less than symbol -->
+<!-- semantic elements provide additional meaning beyond a generic divider -->
+<!-- section id attribute for nav -->
